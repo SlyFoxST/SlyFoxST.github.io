@@ -1,0 +1,464 @@
+
+<!DOCTYPE html>
+<!--[if lt IE 7]><html lang="ru" class="lt-ie9 lt-ie8 lt-ie7"><![endif]-->
+<!--[if IE 7]><html lang="ru" class="lt-ie9 lt-ie8"><![endif]-->
+<!--[if IE 8]><html lang="ru" class="lt-ie9"><![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="ru">
+<!--<![endif]-->
+<head>
+	<meta charset="utf-8" />
+	<title>Концертное агенство </title>
+	<meta name="description" content="Концертное агенство" />
+	<meta name="keywords" content="Концертное агенство" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="shortcut icon" href="favicon.png" />
+	<link rel="stylesheet" href="libs/bootstrap/bootstrap-grid-3.3.1.min.css" />
+	<link rel="stylesheet" href="libs/font-awesome-4.2.0/css/font-awesome.min.css" />
+	<link rel="stylesheet" href="libs/superfish/dist/css/superfish.css" />
+	<link rel="stylesheet" href="libs/magnific/magnific-popup.css" />
+	<link rel="stylesheet" href="libs/owl-carousel/owl.carousel.css" />
+	<link rel="stylesheet" href="libs/countdown/jquery.countdown.css" />
+	<link rel="stylesheet" href="css/animate.css" />
+	<link rel="stylesheet" href="css/fonts.css" />
+	<link rel="stylesheet" href="css/main.css" />
+	<link rel="stylesheet" href="css/media.css" />
+	
+</head>
+<body class="ishome">
+<header class="mein_head">
+<div class="top">
+<div>
+<div class="btn_index hidden-md hidden-lg"><i class="fa fa-bars" aria-hidden="true"></i></div>
+<nav class="top_line">
+	<ul class="sf-menu">
+	    <li><a href="index.php"><i class="fa fa-angle-right" aria-hidden="true"></i>Главная</a></li>
+		<li><a href="artist.php" ><i class="fa fa-angle-right" aria-hidden="true"></i>Артисты</a>
+		<ul>
+<li><a href="view_category.php?id=1">Ведущий, тамада, мс</a></li><li><a href="view_category.php?id=2">Исполнители, музыкальные колективы</a></li><li><a href="view_category.php?id=3">Клубные фрики</a></li><li><a href="view_category.php?id=4">Артисты оригинального жанра</a></li><li><a href="view_category.php?id=5">Фотографы,видеографы</a></li><li><a href="view_category.php?id=6">DJ Show</a></li><li><a href="view_category.php?id=7">Fire, Led Show</a></li><li><a href="view_category.php?id=8">Dance Show</a></li><li><a href="view_category.php?id=9">Strip Show, Go-Go, PJ</a></li>		</ul>
+</li>
+		<li><a href="gallery.php"><i class="fa fa-angle-right" aria-hidden="true"></i>Галерея</a></li>
+		<li><a href="uslygi.php"><i class="fa fa-angle-right" aria-hidden=""></i>Услуги</a>
+		<ul>
+		</ul>
+
+		</li>
+		<li><a href="otzivy.php"><i class="fa fa-angle-right" aria-hidden="true"></i>Отзывы</a></li>
+		<li><a href="contakt.php"><i class="fa fa-angle-right" aria-hidden="true"></i>Контакты</a></li>
+		<li><a href="partners.php"><i class="fa fa-angle-right" aria-hidden="true"></i>Партнеры</a></li>
+		<li><a href="#dobavit" class="dabovit"><i class="fa fa-angle-right" aria-hidden="true"></i>Добавить+</a></li>
+		<li><a  href="#vhod" class="vhod"  style="padding: 10px 0px;margin-right: 0px;"><i class="fa fa-angle-right" aria-hidden="true"></i>Вход/</a></li>
+
+		<li><a href="#registration" class="registration" style="padding: 10px 0px;margin-right: 0px;">Регистрация</a></li>
+	</ul>
+</div>
+    <div class="hidden">
+    <form  id="dobavit" class="frm" method="POST">
+        <input type="text" name="name_dobavit" placeholder="Логин" required />
+        <input type="pasword" name="password_dobavit" placeholder="Пароль" required />
+        <input type="submit" class="btn_contakt" name="dabavit" value="Отправить">
+    </form>
+</div>
+<div class="hidden">
+    <form method="POST" id="registration" class="frm" action="/index.php" onsubmit="return f_submit();">
+
+        <input type="text" id="name" name="name" placeholder="Имя" required />
+        <input type="email" id="email" name="email" placeholder="E-MAIL" required />
+        <input type="password" id="password" name="password" placeholder="Пароль" required />
+        <input type="password" id="password2" name="password2" placeholder="Повторите пароль" required />
+        <input type="submit" class="btn_contakt" name="go" value="Зарегестрироваться"  />
+                <p class="reg_msg"></p>
+    </form>
+</div>
+<div class="hidden">
+    <form  id="vhod" class="frm" method="POST" action="">
+        <input type="text" name="name_vhod" placeholder="Логин" required />
+        <input type="pasword" name="password_vhod" placeholder="Пароль" required />
+        <input type="submit" class="btn_contakt" value="Отправить" name="vhod"/>
+    </form>
+</div>
+</nav>
+</div>
+</div>
+
+
+ <div class="fullscreen-bg">
+    <div class="overlay">
+       <div class="container">
+<div class="row">
+<section class="header_container">
+<div class="col-md-6 col-lg-6 col-sm-6 col-xs-12">
+<div class="animate_header">
+	<div class="header_slag">
+		<span class="akcent">ШОУ ПРОГРАММЫ</span> <br />НА ЛЮБОЙ ВКУС
+	</div>
+	<div class="header_text">
+		Организация праздников и мероприятий – наше любимое дело, в котором мы профессионалы. Будьте уверены, что праздник, организация которого поручена 3DVoice Family, пройдет на высоте!
+	</div>
+	</div>
+</div>
+
+<div class="col-md-6 col-lg-6 col-sm-6 col-xs-12">
+<div class="animate_header_img">
+<a href="index.php"><img src="img/logo.png" class="img-responsive" /></a>
+
+</div>
+</section>
+</div>  
+</div>
+
+    </div>
+    <video loop muted autoplay poster="video/plane.jpg" class="fullscreen-bg__video">
+        <source src="img/video/Dj2.mp4" type="video/mp4">
+        <source src="img/video/Dj2.webm" type="video/webm">
+    </video>
+</div>
+
+
+</header>
+
+<section class="container_slider2">
+<div class="container">
+<div class="col-md-12">
+   <div class="block2_slider">
+   <div class="a_scroll"><a href="#"><i class="fa fa-angle-double-down" aria-hidden="true"></i></a></div>
+<p class="title_slider2">Последние новости</p>
+
+<div class="slider2">
+<div class="next_button"><i class="fa fa-angle-left" aria-hidden="true"></i></div>
+<div class="prev_button"><i class="fa fa-angle-right" aria-hidden="true"></i></div>
+
+<div class="owlcarousel">
+<div class="slide_item">
+<div class="img-previe">
+	<img src="img/13.jpg" class="img-responsive"  alt="Организация свадьбы под ключ!" title="Организация свадьбы под ключ!">
+	</div>
+	<div class="news">
+	<P  class="title_news">Организация свадьбы под ключ!</P>
+            <hr class="hr_news">
+    <p class="p_news">Организация свадьбы под ключ  Свадьба под ключ означает, что самим жениху и невесте, в общем-то, ничего делать и не придется, кроме как наслаждаться </p>
+    <a href="#" class="btn_news">Подробнее</a>
+	</div>
+	</div>
+	
+<div class="slide_item">
+<div class="img-previe">
+	<img src="img/10.jpg" class="img-responsive"alt="СВАДЕБНЫЙ СЕЗОН 2017!" title="СВАДЕБНЫЙ СЕЗОН 2017!">
+	</div>
+	<div class="news">
+	<P  class="title_news">СВАДЕБНЫЙ СЕЗОН 2017!</P>
+            <hr class="hr_news">
+    <p class="p_news">Дорогие жених и невеста! Если вы уже определились с датой самого главного события в вашей жизни, то звоните именно нам! </p>
+    <a href="#" class="btn_news">Подробнее</a>
+	</div>
+	</div>
+	
+<div class="slide_item">
+<div class="img-previe">
+	<img src="img/7.jpg" class="img-responsive" alt="Ваш праздник, вместе с Нами!)" title="Ваш праздник, вместе с Нами!)">
+	</div>
+	<div class="news">
+	<P  class="title_news">Ваш праздник, вместе с Нами!)</P>
+            <hr class="hr_news">
+    <p class="p_news">Концертное агентство «3DVoice Family» организация всех видов праздничных мероприятий </p>
+    <a href="#" class="btn_news">Подробнее</a>
+	</div>
+	</div>
+	
+<div class="slide_item">
+<div class="img-previe">
+	<img src="img/6.jpg" class="img-responsive" alt="Хочешь попасть на наш сайт?" title="Хочешь попасть на наш сайт?">
+	</div>
+	<div class="news">
+	<P  class="title_news">Хочешь попасть на наш сайт?</P>
+            <hr class="hr_news">
+    <p class="p_news">Здравствуйте! Дорогие артисты, ведущие, фотографы, видеографы и все, все, все те, кто хочет оставить здесь свои данные! </p>
+    <a href="#" class="btn_news">Подробнее</a>
+	</div>
+	</div>
+	
+
+</div>	<!--END owlcarousel-->
+   </div><!--END SLIDER-->
+	</div><!--END block2_slider -->
+	</div>
+</section>
+
+
+<section class="container3_sobitie">
+<div class="block_sobitie">
+<div class="a_scroll2"><a href="#"><i class="fa fa-angle-double-down" aria-hidden="true"></i></a></div>
+<div class="text-width">
+<p class="title_sobitie">Вы можете доверить нам любое Ваше событие</p>
+
+<p class="description_sobitie">У нас есть большой опыт организации мероприятий, и мы знаем что именно и как нужно делать, чтобы праздник удался</p>  
+</div>
+<div class="padding_block">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-3 col-lg-3 col-sm-6 col-xs-12"><!--show-->
+
+				<div class="show">
+				<div class="img_show">
+					<img src="img/8.jpg " class="img-responsive"/>
+				</div>
+				<div class="title_show">
+				<h2 class="h2_show">ВЕДУЩИЙ НА ВАШЕ
+МАРОПРИЯТИЕ!</h2>	
+				</div>
+				<div class="description_show">
+					<p class="p_show">Самые яркие, самые харизматичные, самые позитивные ведущие только у нас!</p>
+				</div>
+				<div class="btn_show"><a href="#news_modal" class="zakaz_index" >Заказать</a></div>
+				
+				</div>
+			</div>
+			<div class="col-md-3 col-lg-3 col-sm-6 col-xs-12"><!--show-->
+				<div class="show">
+				<div class="img_show">
+					<img src="img/13.jpg" class="img-responsive"/>
+				</div>
+				<div class="title_show">
+				<h2 class="h2_show">ШОУ ПРОГРАММЫ НА
+ЛЮБОЙ ВКУС!</h2>	
+				</div>
+				<div class="description_show">
+					<p class="p_show">Вы можете именно здесь выбрать артистов на свой вкус!</p>
+				</div>
+				<div class="btn_show"><a href="#news_modal" class="zakaz_index">Заказать</a></div>
+				</div>
+
+			</div>
+			<div class="col-md-3 col-lg-3 col-sm-6 col-xs-12"><!--show-->
+				<div class="show">
+				<div class="img_show">
+					<img src="img/10.jpg" class="img-responsive">
+				</div>
+				<div class="title_show">
+				<h2 class="h2_show">МУЗЫКАЛЬНОЕ 
+СОПРОВОЖДЕНИЕ</h2>	
+				</div>
+				<div class="description_show">
+					<p class="p_show">Музыкальное сопровождение свадеб, дней рождений, корпоративов и других мероприятий!</p>
+				</div>
+				<div class="btn_show"><a href="#news_modal" class="zakaz_index">Заказать</a></div>
+				</div>
+
+			</div>
+			<div class="col-md-3 col-lg-3 col-sm-6 col-xs-12"><!--show-->
+				<div class="show">
+				<div class="img_show">
+					<img src="img/6.jpg" class="img-responsive">
+				</div>
+				<div class="title_show">
+				<h2 class="h2_show">STRIP SHOW</h2>	
+				</div>
+				<div class="description_show">
+					<p class="p_show">Лучшие танцоры со всей Украины! Успей заказать!</p>
+				</div>
+				<div class="btn_show"><a href="#news_modal" class="zakaz_index">Заказать</a></div>
+				</div>
+
+			</div>
+			
+	</div>
+</div>
+</div><div class="hidden">
+<form id="news_modal" class="md_n">
+	<input type="text" name="text_zakaz" placeholder="Имя">
+	<input type="phone" name="phone_zakaz" placeholder="Номер телефона">
+	<p>Ваше сообщение</p>
+	<textarea cols="30"></textarea>
+	<input type="submit" value="Отправить" class="btn_zzakaz_index">
+</form></section>
+
+
+
+<section class="artist">
+<div class="overlay_artist">
+
+   <div class="block2_slider_2">
+   <div class="a_scroll3"><a href="#"><i class="fa fa-angle-double-down" aria-hidden="true"></i></a></div>
+<p class="title_artist">В нашей базе самый<span class="span_decoration_title_artist"> большой выбор артистов
+			</span></p>
+
+<div class="slider2">
+<div class="next_button"><i class="fa fa-angle-left" aria-hidden="true"></i></div>
+<div class="prev_button"><i class="fa fa-angle-right" aria-hidden="true"></i></div>
+
+<div class="owlcarousel">
+<div class="slide_item">
+<div class="img-previe">
+	<img src="../img/artist/hqdefault_1_500x375.jpg" class="img-responsive"  alt="Организация свадьбы под ключ!" title="Организация свадьбы под ключ!">
+	</div>
+	<div class="item_artist">
+	<div class="artist_info">
+	<P  class="title_artist_opisanie">Дуэт "Вечерние мотыльки"</P>
+            <hr class="hr_artist">
+
+    <p class="p_artist">Дуэт "Вечерние мотыльки"</p>
+    <a href="view_content.php?id=1" class="btn_news">Подробнее</a>
+	</div>
+	</div>
+	</div>
+	
+<div class="slide_item">
+<div class="img-previe">
+	<img src="../img/artist/artist3.jpg" class="img-responsive"alt="СВАДЕБНЫЙ СЕЗОН 2017!" title="СВАДЕБНЫЙ СЕЗОН 2017!">
+	</div>
+	<div class="item_artist">
+	<div class="artist_info">
+	<P  class="title_artist_opisanie">Ведущий, Тамада, МС</P>
+            <hr class="hr_artist">
+
+    <p class="p_artist">Евгений Воловиков</p>
+    <a href="view_content.php?id=1" class="btn_news">Подробнее</a>
+	</div>
+	</div>
+	</div>
+	
+<div class="slide_item">
+<div class="img-previe">
+	<img src="../img/artist/artist2.jpg" class="img-responsive" alt="Ваш праздник, вместе с Нами!)" title="Ваш праздник, вместе с Нами!)">
+	</div>
+	<div class="item_artist">
+	<div class="artist_info">
+	<P  class="title_artist_opisanie">Ведущий, Тамада, МС</P>
+            <hr class="hr_artist">
+
+    <p class="p_artist">Евгений Воловиков</p>
+    <a href="view_content.php?id=1" class="btn_news">Подробнее</a>
+	</div>
+	</div>
+	</div>
+	
+<div class="slide_item">
+<div class="img-previe">
+	<img src="../img/artist/artisti.jpg" class="img-responsive" alt="Хочешь попасть на наш сайт?" title="Хочешь попасть на наш сайт?">
+	</div>
+	<div class="item_artist">
+	<div class="artist_info">
+	<P  class="title_artist_opisanie">Ведущий, Тамада, МС</P>
+            <hr class="hr_artist">
+
+    <p class="p_artist">Евгений Воловиков</p>
+    <a href="view_content.php?id=1" class="btn_news">Подробнее</a>
+	</div>
+	</div>
+	</div>
+	
+	<div class="slide_item">
+<div class="img-previe">
+	<img src="../img/artist/artist5.jpg" class="img-responsive" alt="Хочешь попасть на наш сайт?" title="Хочешь попасть на наш сайт?">
+	</div>
+	<div class="item_artist">
+	<div class="artist_info">
+	<P  class="title_artist_opisanie">Ведущий, Тамада, МС</P>
+            <hr class="hr_artist">
+
+    <p class="p_artist">Евгений Воловиков</p>
+    <a href="view_content.php?id=1" class="btn_news">Подробнее</a>
+	</div>
+	</div>
+	</div>
+	
+	<div class="slide_item">
+<div class="img-previe">
+	<img src="../img/artist/mueuquhrpvg-min_0.jpg" class="img-responsive" alt="Хочешь попасть на наш сайт?" title="Хочешь попасть на наш сайт?">
+	</div>
+	<div class="item_artist">
+	<div class="artist_info">
+	<P  class="title_artist_opisanie">Ведущий, Тамада, МС</P>
+            <hr class="hr_artist">
+
+    <p class="p_artist">Евгений Воловиков</p>
+    <a href="view_content.php?id=1" class="btn_news">Подробнее</a>
+	</div>
+	</div>
+	</div>
+	
+
+</div>	<!--END owlcarousel-->
+   </div><!--END SLIDER-->
+	</div><!--END block2_slider -->
+	</div>
+</section>
+
+<section class="footer">
+	<footer>
+		
+		<div class="container">
+			<div class="col-md-3">
+				<p class="slog">Живи ярко, будь на высоте!</p>
+				<h2 class="footer_h2">Организация праздников, канцертов, шоу-программ</h2>
+				<p class="contact">
+				<i class="fa fa-envelope-o" aria-hidden="true"></i>3dvoiceFaily@gmail.com<br>
+                <i class="fa fa-phone" aria-hidden="true"></i>+38055 555 55 55<br />
+                <i class="fa fa-map-marker" aria-hidden="true"></i>Славянск, ул.Центральная 12     
+				</p>
+			</div>
+			<div class="col-md-3">
+				<p class="footer_mnu">Меню:</p>
+				<ul class="footer_ul">
+					<li><i class="fa fa-angle-right" aria-hidden="true"></i><a href="#">Артисты</a></li>
+					<li><i class="fa fa-angle-right" aria-hidden="true"></i><a href="#">Афифша</a></li>
+					<li><i class="fa fa-angle-right" aria-hidden="true"></i><a href="#">Услуги</a></li>
+					<li><i class="fa fa-angle-right" aria-hidden="true"></i><a href="#">Отзывы</a></li>
+					<li><i class="fa fa-angle-right" aria-hidden="true"></i><a href="#">Контакты</a></li>
+					<li><i class="fa fa-angle-right" aria-hidden="true"></i><a href="#">Партнеры</a></li>
+					
+
+				</ul>
+			</div>
+			<div class="col-md-3">
+				<p  class="we_instagram">Галерея инстаргамм:</p>
+			</div>
+			<div class="col-md-3">
+				<p class="soc_seti">Мы в соц.сетях</p>
+				<ul class="soc-seti">
+					<li><i class="fa fa-facebook" aria-hidden="true"></i><a href="">Facebook</a></li>
+					<li><i class="fa fa-vk" aria-hidden="true"></i><a href="">vk</a></li>
+					<li><i class="fa fa-instagram" aria-hidden="true"></i><a href="">instagramm</a></li>
+					<li><i class="fa fa-twitter" aria-hidden="true"></i><a href="">twitter</a></li>
+				</ul>
+			</div>
+		</div>
+	</footer>
+</section>
+
+
+
+
+
+
+
+
+	<!--[if lt IE 9]>
+	<script src="libs/html5shiv/es5-shim.min.js"></script>
+	<script src="libs/html5shiv/html5shiv.min.js"></script>
+	<script src="libs/html5shiv/html5shiv-printshiv.min.js"></script>
+	<script src="libs/respond/respond.min.js"></script>
+	<![endif]-->
+	<script src="libs/jquery/jquery-1.11.1.min.js"></script>
+	<script src="libs/superfish/dist/js/superfish.min.js"></script>
+	<script src="libs/jquery-mousewheel/jquery.mousewheel.min.js"></script>
+	<script src="libs/magnific/jquery.magnific-popup.js"></script>
+	<script src="js/animate-css.js"></script>
+	<script src="js/wow.min.js"></script>
+	<script src="js/numcount.js"></script>
+	<script src="libs/waypoints/waypoints-1.6.2.min.js"></script>
+	<script src="libs/scrollto/jquery.scrollTo.min.js"></script>
+	<script src="libs/owl-carousel/owl.carousel.min.js"></script>
+	<script src="libs/countdown/jquery.plugin.js"></script>
+	<script src="libs/countdown/jquery.countdown.min.js"></script>
+	<script src="libs/countdown/jquery.countdown-ru.js"></script>
+	<script src="libs/landing-nav/navigation.js"></script>
+	<script src="libs/jquery/jquery.form.min.js"></script>
+	<script src="libs/jquery/jquery.validate.js"></script>
+	<script src="js/common.js"></script>
+	<!-- Yandex.Metrika counter --><!-- /Yandex.Metrika counter -->
+	<!-- Google Analytics counter --><!-- /Google Analytics counter -->
+	
+</body>
+</html>
