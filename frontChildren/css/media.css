@@ -1,0 +1,12 @@
+@media all and (min-width: 1500px) {
+  .wrapper-index {
+    background: url(../img/fon2.png) top center no-repeat !important; } }
+
+@media all and (max-width: 720px) {
+  .section-form {
+    width: 80% !important;
+    padding: 140px 40px !important; }
+  .wrapper-index {
+    background-position: center center !important; }
+  .form-register input {
+    height: 45px; } }
